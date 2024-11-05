@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+  .main {
+    background-color: #141414;
+  }
+
+  .main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+  }
+
+  .main__content h1 {
+    font-size: 4rem;
+    background-color: #ffb199;
+    background-image: linear-gradient(to top, #221C75 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  .main__content h2, h3, h4, p {
+    background-color: #ffb199;
+    background-image: linear-gradient(to top, #7973D0 0%, #4E4992 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  .main__btn {
+    font-size: 1rem;
+    background-image: linear-gradient(to top, #7973D0 0%, #4E4992 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+  }
+
+  .main__btn a {
+    position: relative;
+    color: #fff;
+    z-index: 2;
+    text-decoration: none;
+  }
+
+  .main__btn:hover {
+    background-image: linear-gradient(to top, #7973D0 0%, #ffb199 100%);
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#main__img {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .main__container{
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90vh;
+  }
+
+  .main__content{
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .main__content h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+
+  .main__btn{
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+  }
+}

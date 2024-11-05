@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/list-check-solid.svg')}}">
+</head>
+
+<body>
+  <!-- Navbar Section -->
+  {% include "./components/navbar.html" %}
+
+  <!-- Home Section -->
+  <div class="main">
+    <div class="main__container">
+      <div class="main__content">
+        <h1>TASKS LIFE MANAGEMENT</h1>
+        <h2>Homework</h2>
+        <h3>Chores</h3>
+        <h4>Things to dooo</h4>
+        <p>...</p>
+        <button class="main__btn"><a href="/register">Sign Up</a></button>
+      </div>
+      <div class="main__img--container">
+        <img src="{{ url_for('static', filename='img/To-Do.svg') }}" alt="" id="main__img">
+      </div>
+    </div>
+  </div>
+
+  {% if page %}
+  <iframe src="{{ page }}" frameborder="0"></iframe>
+  {% endif %}
+
+  <script src="https://kit.fontawesome.com/a9b71fbf52.js" crossorigin="anonymous"></script>
+</body>
+</html>
